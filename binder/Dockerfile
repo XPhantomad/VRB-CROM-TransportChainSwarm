@@ -2,8 +2,6 @@
 FROM intel4coro/jupyter-ros2:jazzy-py3.12
 USER root
 
-EXPOSE 3004
-
 # Install python packages
 COPY requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt

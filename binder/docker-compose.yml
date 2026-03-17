@@ -1,7 +1,7 @@
 version: '3'
 services:
   binder-template:
-    image: binder-template:main
+    image: binder-template:main2
     build:
       context: ../
       dockerfile: ./binder/Dockerfile
