@@ -1,7 +1,8 @@
 # Dockerfile of the base image: https://github.com/IntEL4CoRo/jupyter-ros2/blob/main/Dockerfile
-FROM intel4coro/jupyter-ros2:jazzy-py3.12
-USER root
+# FROM intel4coro/jupyter-ros2:jazzy-py3.12
+# USER root
 
+FROM osrf/ros:jazzy-desktop-full
 EXPOSE 3004
 
 
@@ -14,7 +15,7 @@ RUN apt-get update && apt-get install -y git colcon cmake libfreeimage-dev libfr
 RUN cd /usr/lib/x86_64-linux-gnu \
     && ln -s libglut.so.3.12.0 libglut.so.3
 
-RUN git clone -b flocking https://github.com/XPhantomad/Context-Role-Oriented-Transport-Chain-Swarm.git
+RUN git clone -b main https://github.com/XPhantomad/Context-Role-Oriented-Transport-Chain-Swarm.git
 
 # Install ARGoS3
 RUN cd Context-Role-Oriented-Transport-Chain-Swarm \
@@ -74,8 +75,20 @@ RUN cd Context-Role-Oriented-Transport-Chain-Swarm/startup \
     && source ../rosWorkspace/install/setup.bash \
     && pip install -r requirements.txt 
 
+# For use of an other docker image
+
+# Install jupyterlab and git
+RUN apt-get update && apt-get install -y python3-pip git
+RUN pip3 install jupyterlab
+
+# Expose port for jupyterlab
+EXPOSE 8888
+
+
 #============= Install extra software packages =============#
 # RUN apt update && apt install -y curl
+
+
 
 # Install python packages
 COPY requirements.txt /tmp/requirements.txt
