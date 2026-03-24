@@ -23,16 +23,18 @@ ENV CODE_WORKING_DIRECTORY=${REPO_DIR}
 COPY binder/entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
+
 RUN wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
     apt-get install -y ./google-chrome-stable_current_amd64.deb && \
     rm google-chrome-stable_current_amd64.deb 
-
 #===========================================================#
 
 EXPOSE 3004
 
 # Change the default shell to Bash
 SHELL [ "/bin/bash" , "-c" ]
+
+EXPOSE 3004
 
 USER root
 # Install Requirements
@@ -42,7 +44,7 @@ USER root
 RUN cd /usr/lib/x86_64-linux-gnu \
     && ln -s libglut.so.3.12.0 libglut.so.3
 
-RUN git clone -b master https://github.com/XPhantomad/Context-Role-Oriented-Transport-Chain-Swarm.git
+RUN git clone -b flocking https://github.com/XPhantomad/Context-Role-Oriented-Transport-Chain-Swarm.git
 
 USER root
 # Install ARGoS3
