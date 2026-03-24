@@ -1,12 +1,19 @@
 # binder-template
 
-[![Binder](https://binder.intel4coro.de/badge_logo.svg)](https://binder.intel4coro.de/v2/gh/IntEL4CoRo/binder-template.git/main)
+[![Binder](https://binder.intel4coro.de/badge_logo.svg)](https://binder.intel4coro.de/v2/gh/XPhantomad/VRB-CROM-TransportChainSwarm2/main?labpath=%2Fnotebooks%2Fmujoco.ipynb)
 
 This is a template repo for running robotics research Jupyter Notebooks on Binderhub.
 
-## Quick Start
+## Quick Start: Start Transport Chain Swarm
 
-### Launcher Urls
+- click on the binder item above and open the environment
+- open a virtual desktop from the launcher
+- open a terminal and run:
+  - ```chmod +x ./Context-Role-Oriented-Transport-Chain-Swarm/VRBrun.sh```
+  - ```./Context-Role-Oriented-Transport-Chain-Swarm/VRBrun.sh```
+- start the simulation in the virtual desktop in argos3
+
+## Launcher Urls
 
 - JupyterLab: https://binder.intel4coro.de/v2/gh/IntEL4CoRo/binder-template.git/main?urlpath=lab/tree/notebooks/mujoco.ipynb
 

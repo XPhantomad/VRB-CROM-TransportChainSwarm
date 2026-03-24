@@ -25,6 +25,8 @@ ENTRYPOINT ["/entrypoint.sh"]
 
 #===========================================================#
 
+EXPOSE 3004
+
 # Change the default shell to Bash
 SHELL [ "/bin/bash" , "-c" ]
 
