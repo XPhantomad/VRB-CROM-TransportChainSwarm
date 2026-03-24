@@ -12,6 +12,14 @@ This is a template repo for running robotics research Jupyter Notebooks on Binde
   - ```chmod +x ./Context-Role-Oriented-Transport-Chain-Swarm/VRBrun.sh```
   - ```./Context-Role-Oriented-Transport-Chain-Swarm/VRBrun.sh```
 - start the simulation in the virtual desktop in argos3
+- open another terminal to start the Web App in chrome via: 
+```
+google-chrome \
+  --no-sandbox \
+  --disable-dev-shm-usage \
+  --disable-extensions \
+  "http://localhost:5000" 
+  ```
 
 ## Launcher Urls
 
