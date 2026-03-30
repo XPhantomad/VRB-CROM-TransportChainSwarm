@@ -24,7 +24,7 @@ google-chrome \
 
 ## Launcher Urls
 
-- JupyterLab: https://binder.intel4coro.de/v2/gh/IntEL4CoRo/binder-template.git/main?urlpath=lab/tree/notebooks/mujoco.ipynb
+- JupyterLab: https://binder.intel4coro.de/v2/gh/IntEL4CoRo/binder-template.git/main?urlpath=lab/tree/notebooks/instructions.ipynb
 
 - VScode: https://binder.intel4coro.de/v2/gh/XPhantomad/VRB-CROM-TransportChainSwarm2/binder-template.git/main?urlpath=vscode?folder=/home/repo
 
